@@ -1,0 +1,21 @@
+{
+	"name": "src_omdb_api",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "src_omdb_api",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"s": {
+				"type": "string",
+				"defaultValue": "batman"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "http://www.omdbapi.com/?s=batman&apikey=852159f0",
+			"requestMethod": "GET"
+		}
+	}
+}
