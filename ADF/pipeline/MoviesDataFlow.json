@@ -23,8 +23,7 @@
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSetting",
-							"copyBehavior": "MergeFiles"
+							"type": "AzureBlobStorageWriteSetting"
 						},
 						"formatSettings": {
 							"type": "DelimitedTextWriteSetting",
