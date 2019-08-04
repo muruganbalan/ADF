@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "employee.txt",
+				"fileName": "Movies.txt",
 				"container": "publicrestapi"
 			},
 			"columnDelimiter": ",",
@@ -21,23 +21,7 @@
 		},
 		"schema": [
 			{
-				"name": "id",
-				"type": "String"
-			},
-			{
-				"name": "employee_name",
-				"type": "String"
-			},
-			{
-				"name": "employee_salary",
-				"type": "String"
-			},
-			{
-				"name": "employee_age",
-				"type": "String"
-			},
-			{
-				"name": "profile_image",
+				"name": "{",
 				"type": "String"
 			}
 		]
