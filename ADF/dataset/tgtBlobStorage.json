@@ -21,7 +21,215 @@
 		},
 		"schema": [
 			{
-				"name": "{",
+				"name": "{\"Search\":[{\"Title\":\"Batman Begins\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Year\":\"2005\"",
+				"type": "String"
+			},
+			{
+				"name": "\"imdbID\":\"tt0372784\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Type\":\"movie\"3",
+				"type": "String"
+			},
+			{
+				"name": "\"Poster\":\"https://m.media-amazon.com/images/M/MV5BZmUwNGU2ZmItMmRiNC00MjhlLTg5YWUtODMyNzkxODYzMmZlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg\"}",
+				"type": "String"
+			},
+			{
+				"name": "{\"Title\":\"Batman v Superman: Dawn of Justice\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Year\":\"2016\"",
+				"type": "String"
+			},
+			{
+				"name": "\"imdbID\":\"tt2975590\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Type\":\"movie\"8",
+				"type": "String"
+			},
+			{
+				"name": "\"Poster\":\"https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg\"}",
+				"type": "String"
+			},
+			{
+				"name": "{\"Title\":\"Batman\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Year\":\"1989\"",
+				"type": "String"
+			},
+			{
+				"name": "\"imdbID\":\"tt0096895\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Type\":\"movie\"13",
+				"type": "String"
+			},
+			{
+				"name": "\"Poster\":\"https://m.media-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg\"}",
+				"type": "String"
+			},
+			{
+				"name": "{\"Title\":\"Batman Returns\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Year\":\"1992\"",
+				"type": "String"
+			},
+			{
+				"name": "\"imdbID\":\"tt0103776\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Type\":\"movie\"18",
+				"type": "String"
+			},
+			{
+				"name": "\"Poster\":\"https://m.media-amazon.com/images/M/MV5BOGZmYzVkMmItM2NiOS00MDI3LWI4ZWQtMTg0YWZkODRkMmViXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_SX300.jpg\"}",
+				"type": "String"
+			},
+			{
+				"name": "{\"Title\":\"Batman Forever\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Year\":\"1995\"",
+				"type": "String"
+			},
+			{
+				"name": "\"imdbID\":\"tt0112462\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Type\":\"movie\"23",
+				"type": "String"
+			},
+			{
+				"name": "\"Poster\":\"https://m.media-amazon.com/images/M/MV5BNDdjYmFiYWEtYzBhZS00YTZkLWFlODgtY2I5MDE0NzZmMDljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg\"}",
+				"type": "String"
+			},
+			{
+				"name": "{\"Title\":\"Batman & Robin\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Year\":\"1997\"",
+				"type": "String"
+			},
+			{
+				"name": "\"imdbID\":\"tt0118688\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Type\":\"movie\"28",
+				"type": "String"
+			},
+			{
+				"name": "\"Poster\":\"https://m.media-amazon.com/images/M/MV5BMGQ5YTM1NmMtYmIxYy00N2VmLWJhZTYtN2EwYTY3MWFhOTczXkEyXkFqcGdeQXVyNTA2NTI0MTY@._V1_SX300.jpg\"}",
+				"type": "String"
+			},
+			{
+				"name": "{\"Title\":\"The Lego Batman Movie\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Year\":\"2017\"",
+				"type": "String"
+			},
+			{
+				"name": "\"imdbID\":\"tt4116284\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Type\":\"movie\"33",
+				"type": "String"
+			},
+			{
+				"name": "\"Poster\":\"https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg\"}",
+				"type": "String"
+			},
+			{
+				"name": "{\"Title\":\"Batman: The Animated Series\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Year\":\"1992�1995\"",
+				"type": "String"
+			},
+			{
+				"name": "\"imdbID\":\"tt0103359\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Type\":\"series\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Poster\":\"https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg\"}",
+				"type": "String"
+			},
+			{
+				"name": "{\"Title\":\"Batman: Under the Red Hood\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Year\":\"2010\"",
+				"type": "String"
+			},
+			{
+				"name": "\"imdbID\":\"tt1569923\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Type\":\"movie\"43",
+				"type": "String"
+			},
+			{
+				"name": "\"Poster\":\"https://m.media-amazon.com/images/M/MV5BYTdlODI0YTYtNjk5ZS00YzZjLTllZjktYmYzNWM4NmI5MmMxXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg\"}",
+				"type": "String"
+			},
+			{
+				"name": "{\"Title\":\"Batman: The Dark Knight Returns",
+				"type": "String"
+			},
+			{
+				"name": " Part 1\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Year\":\"2012\"",
+				"type": "String"
+			},
+			{
+				"name": "\"imdbID\":\"tt2313197\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Type\":\"movie\"49",
+				"type": "String"
+			},
+			{
+				"name": "\"Poster\":\"https://m.media-amazon.com/images/M/MV5BMzIxMDkxNDM2M15BMl5BanBnXkFtZTcwMDA5ODY1OQ@@._V1_SX300.jpg\"}]",
+				"type": "String"
+			},
+			{
+				"name": "\"totalResults\":\"366\"",
+				"type": "String"
+			},
+			{
+				"name": "\"Response\":\"True\"}",
 				"type": "String"
 			}
 		]
