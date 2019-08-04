@@ -1,0 +1,159 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory Name",
+			"defaultValue": "azdevdatafactory"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "copyMoviesData",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "RestSource",
+								"httpRequestTimeout": "00:01:40",
+								"requestInterval": "00.00:00:00.010"
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobStorageWriteSetting"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSetting",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"path": "Search[0].Title"
+										},
+										"sink": {
+											"name": "Search[0].Title",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "Search[0].Year"
+										},
+										"sink": {
+											"name": "Search[0].Year",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "Search[0].imdbID"
+										},
+										"sink": {
+											"name": "Search[0].imdbID",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "Search[0].Type"
+										},
+										"sink": {
+											"name": "Search[0].Type",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "Search[0].Poster"
+										},
+										"sink": {
+											"name": "Search[0].Poster",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "totalResults"
+										},
+										"sink": {
+											"name": "totalResults",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "Response"
+										},
+										"sink": {
+											"name": "Response",
+											"type": "String"
+										}
+									}
+								]
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "src_omdb_api",
+								"type": "DatasetReference"
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "tgtBlobStorage",
+								"type": "DatasetReference"
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/src_omdb_api')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/src_omdb_api')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "src_omdb_api",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {
+					"relativeUrl": "http://www.omdbapi.com/?s=batman&apikey=852159f0",
+					"requestMethod": "GET"
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
