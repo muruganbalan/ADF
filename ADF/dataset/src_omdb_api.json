@@ -5,12 +5,6 @@
 			"referenceName": "src_omdb_api",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"s": {
-				"type": "string",
-				"defaultValue": "batman"
-			}
-		},
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
