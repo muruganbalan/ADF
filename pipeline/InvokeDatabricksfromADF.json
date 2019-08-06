@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "DatabricksAnalysis",
+				"name": "DatabricksDataAnalysis",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
