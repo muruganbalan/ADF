@@ -7,6 +7,10 @@
 			"metadata": "Data Factory Name",
 			"defaultValue": "azdevdatafactory"
 		},
+		"AzureDatabricks1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
+		},
 		"azblob_stg_employees_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'azblob_stg_employees'"
@@ -53,6 +57,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"AzureDatabricks1_accessToken": {
+						"value": "[parameters('AzureDatabricks1_accessToken')]"
 					},
 					"azblob_stg_employees_connectionString": {
 						"value": "[parameters('azblob_stg_employees_connectionString')]"

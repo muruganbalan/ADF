@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "azdevdatafactory"
 		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
 		"azblob_stg_employees_connectionString": {
 			"value": ""
 		},
