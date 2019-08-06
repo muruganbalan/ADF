@@ -1,0 +1,37 @@
+{
+	"name": "tgt_SqlServer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "tgt_azuresqldatabase",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "text"
+			},
+			{
+				"name": "employee_name",
+				"type": "text"
+			},
+			{
+				"name": "employee_salary",
+				"type": "text"
+			},
+			{
+				"name": "employee_age",
+				"type": "text"
+			},
+			{
+				"name": "profile_image",
+				"type": "text"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[employee]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,121 @@
+{
+	"name": "MoviesDataFlow",
+	"properties": {
+		"activities": [
+			{
+				"name": "copyMoviesData",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010"
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSetting"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSetting",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "Search[0].Title"
+								},
+								"sink": {
+									"name": "Search[0].Title",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "Search[0].Year"
+								},
+								"sink": {
+									"name": "Search[0].Year",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "Search[0].imdbID"
+								},
+								"sink": {
+									"name": "Search[0].imdbID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "Search[0].Type"
+								},
+								"sink": {
+									"name": "Search[0].Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "Search[0].Poster"
+								},
+								"sink": {
+									"name": "Search[0].Poster",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "totalResults"
+								},
+								"sink": {
+									"name": "totalResults",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "Response"
+								},
+								"sink": {
+									"name": "Response",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "src_omdb_api",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "tgtBlobStorage",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

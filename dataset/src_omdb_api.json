@@ -1,0 +1,16 @@
+{
+	"name": "src_omdb_api",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "src_omdb_api",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "http://www.omdbapi.com/?s=batman&apikey=852159f0",
+			"requestMethod": "GET"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "srcRestAPI",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "srcRestAPI",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "http://dummy.restapiexample.com/api/v1/employees",
+			"requestMethod": "GET"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
